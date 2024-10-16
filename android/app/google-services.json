@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1094644633367",
+    "project_id": "derrickbarber-a3939",
+    "storage_bucket": "derrickbarber-a3939.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094644633367:android:977dfc5cbb7400cc2b7152",
+        "android_client_info": {
+          "package_name": "com.codewarei.derrick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApzM67qeXTO-Hq2VtPpv3s1i8ZBlg3sqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
