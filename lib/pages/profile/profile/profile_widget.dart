@@ -171,7 +171,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.network(
-                'https://images.unsplash.com/photo-1727075252960-7eeff88ae038?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D',
+                'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
               ).image,
             ),
           ),
@@ -390,7 +390,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                               width: double.infinity,
                               height: 60.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).alternate,
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 3.0,
@@ -404,7 +404,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                 borderRadius: BorderRadius.circular(8.0),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
-                                  color: const Color(0xFFC6D9EC),
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
                                   width: 5.0,
                                 ),
                               ),
@@ -485,7 +486,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             width: double.infinity,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).tertiary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -499,7 +500,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                               borderRadius: BorderRadius.circular(8.0),
                               shape: BoxShape.rectangle,
                               border: Border.all(
-                                color: const Color(0xFFC6D9EC),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 width: 5.0,
                               ),
                             ),
@@ -558,7 +560,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             width: double.infinity,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).tertiary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -572,7 +574,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                               borderRadius: BorderRadius.circular(8.0),
                               shape: BoxShape.rectangle,
                               border: Border.all(
-                                color: const Color(0xFFC6D9EC),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 width: 5.0,
                               ),
                             ),
@@ -631,7 +634,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             width: double.infinity,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).tertiary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -645,7 +648,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                               borderRadius: BorderRadius.circular(8.0),
                               shape: BoxShape.rectangle,
                               border: Border.all(
-                                color: const Color(0xFFC6D9EC),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 width: 5.0,
                               ),
                             ),
@@ -713,7 +717,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FlutterFlowTheme.of(context).tertiary,
                               textStyle: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -725,7 +729,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                   ),
                               elevation: 5.0,
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).secondary,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(38.0),

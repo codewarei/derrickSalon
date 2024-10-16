@@ -158,8 +158,8 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                         clipBehavior:
                                             Clip.antiAliasWithSaveLayer,
                                         color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        elevation: 0.0,
+                                            .primary,
+                                        elevation: 10.0,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
@@ -182,7 +182,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                               borderSide: BorderSide(
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryText,
+                                                        .primaryBackground,
                                                 width: 2.0,
                                               ),
                                               borderRadius:
@@ -362,13 +362,13 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                               BoxDecoration(
                                                             color: FlutterFlowTheme
                                                                     .of(context)
-                                                                .secondaryText,
+                                                                .primary,
                                                             boxShadow: [
                                                               BoxShadow(
                                                                 blurRadius: 0.0,
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .secondary,
+                                                                    .primaryBackground,
                                                                 offset: const Offset(
                                                                   0.0,
                                                                   1.0,
@@ -482,7 +482,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                             '${containerUsersRecord.name} ${containerUsersRecord.surname}',
                                                                             style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                   fontFamily: 'Raleway',
-                                                                                  color: FlutterFlowTheme.of(context).secondary,
+                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                   fontSize: 15.0,
                                                                                   letterSpacing: 0.0,
                                                                                   fontWeight: FontWeight.w500,
@@ -501,7 +501,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                                 listViewBookingsRecord.time!),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Raleway',
-                                                                                  color: FlutterFlowTheme.of(context).secondary,
+                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                   fontSize: 12.0,
                                                                                   letterSpacing: 0.0,
                                                                                   fontWeight: FontWeight.bold,
@@ -525,7 +525,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                                   dateTimeFormat("MMMMEEEEd", listViewBookingsRecord.time!),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Raleway',
-                                                                                        color: FlutterFlowTheme.of(context).secondary,
+                                                                                        color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
@@ -628,7 +628,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                               0.0,
                                                                               0.0),
                                                                           color:
-                                                                              FlutterFlowTheme.of(context).secondary,
+                                                                              FlutterFlowTheme.of(context).primaryBackground,
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
@@ -763,9 +763,10 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                   child: Container(
                                                     width: double.infinity,
                                                     decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
                                                       boxShadow: [
                                                         BoxShadow(
                                                           blurRadius: 0.0,
@@ -794,10 +795,9 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                 20.0),
                                                       ),
                                                       border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .secondary,
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .primaryBackground,
                                                       ),
                                                     ),
                                                     child: Padding(
@@ -873,6 +873,8 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                           .override(
                                                                             fontFamily:
                                                                                 'Raleway',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryBackground,
                                                                             letterSpacing:
                                                                                 0.0,
                                                                           ),
@@ -903,6 +905,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                               dateTimeFormat("MMMMEEEEd", listViewHistoryRecord.time!),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Raleway',
+                                                                                    color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
@@ -920,6 +923,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                                 listViewHistoryRecord.time!),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Raleway',
+                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                   letterSpacing: 0.0,
                                                                                   fontWeight: FontWeight.bold,
                                                                                 ),

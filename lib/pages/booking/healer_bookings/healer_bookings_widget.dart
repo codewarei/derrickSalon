@@ -315,7 +315,8 @@ class _HealerBookingsWidgetState extends State<HealerBookingsWidget>
                                         child: Container(
                                           width: double.infinity,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x96FFFFFF),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
                                             borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(20.0),
                                               bottomRight:
@@ -376,7 +377,7 @@ class _HealerBookingsWidgetState extends State<HealerBookingsWidget>
                                                                           'Raleway',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .primaryBackground,
                                                                       fontSize:
                                                                           14.0,
                                                                       letterSpacing:
@@ -406,7 +407,7 @@ class _HealerBookingsWidgetState extends State<HealerBookingsWidget>
                                                                           'Raleway',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .primaryBackground,
                                                                       fontSize:
                                                                           14.0,
                                                                       letterSpacing:
@@ -461,7 +462,7 @@ class _HealerBookingsWidgetState extends State<HealerBookingsWidget>
                                                                           'Raleway',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .primaryBackground,
                                                                       fontSize:
                                                                           14.0,
                                                                       letterSpacing:
@@ -484,7 +485,7 @@ class _HealerBookingsWidgetState extends State<HealerBookingsWidget>
                                                   fillColor:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .primary,
+                                                          .secondaryText,
                                                   disabledColor:
                                                       const Color(0xFF878A87),
                                                   icon: Icon(

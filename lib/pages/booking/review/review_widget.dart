@@ -54,7 +54,13 @@ class _ReviewWidgetState extends State<ReviewWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).alternate,
+          color: FlutterFlowTheme.of(context).primaryBackground,
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: Image.network(
+              'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
+            ).image,
+          ),
         ),
         child: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),

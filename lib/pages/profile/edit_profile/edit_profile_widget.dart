@@ -68,7 +68,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: Image.network(
-              'https://images.unsplash.com/photo-1727075252960-7eeff88ae038?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D',
+              'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
             ).image,
           ),
         ),
@@ -315,11 +315,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         enabledBorder: OutlineInputBorder(
@@ -351,13 +355,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.of(context).alternate,
+                        fillColor: FlutterFlowTheme.of(context).tertiary,
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 0.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             letterSpacing: 0.0,
                           ),
                       validator: _model.yourNameTextControllerValidator
@@ -379,11 +384,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         enabledBorder: OutlineInputBorder(
@@ -415,13 +424,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.of(context).alternate,
+                        fillColor: FlutterFlowTheme.of(context).tertiary,
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 0.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             letterSpacing: 0.0,
                           ),
                       validator: _model.surnameTextControllerValidator
@@ -443,11 +453,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         enabledBorder: OutlineInputBorder(
@@ -479,13 +493,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.of(context).alternate,
+                        fillColor: FlutterFlowTheme.of(context).tertiary,
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 0.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             letterSpacing: 0.0,
                           ),
                       validator: _model.phoneNumberTextController1Validator
@@ -507,11 +522,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                         enabledBorder: OutlineInputBorder(
@@ -543,13 +562,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.of(context).alternate,
+                        fillColor: FlutterFlowTheme.of(context).tertiary,
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 0.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             letterSpacing: 0.0,
                           ),
                       validator: _model.phoneNumberTextController2Validator
@@ -568,16 +588,22 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: currentUserEmail,
-                      labelStyle:
-                          FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Raleway',
-                                letterSpacing: 0.0,
-                              ),
-                      hintStyle:
-                          FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Raleway',
-                                letterSpacing: 0.0,
-                              ),
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .labelMedium
+                          .override(
+                            fontFamily: 'Raleway',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            letterSpacing: 0.0,
+                          ),
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .labelMedium
+                          .override(
+                            fontFamily: 'Raleway',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            letterSpacing: 0.0,
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -607,13 +633,13 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       filled: true,
-                      fillColor: FlutterFlowTheme.of(context).alternate,
+                      fillColor: FlutterFlowTheme.of(context).tertiary,
                       contentPadding:
                           const EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 0.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Raleway',
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).primaryBackground,
                           letterSpacing: 0.0,
                         ),
                     validator: _model.emailTextControllerValidator
@@ -658,7 +684,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FlutterFlowTheme.of(context).tertiary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleMedium.override(
                                   fontFamily: 'Raleway',

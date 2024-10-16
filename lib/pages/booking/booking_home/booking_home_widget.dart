@@ -3,11 +3,8 @@ import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'booking_home_model.dart';
 export 'booking_home_model.dart';
 
@@ -45,8 +42,6 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -72,78 +67,8 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 40.0,
-                            height: 40.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              shape: BoxShape.circle,
-                            ),
-                            child: FaIcon(
-                              FontAwesomeIcons.alignLeft,
-                              color: FlutterFlowTheme.of(context).tertiary,
-                              size: 25.0,
-                            ),
-                          ),
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('MyCart');
-                            },
-                            child: badges.Badge(
-                              badgeContent: Text(
-                                FFAppState().cartitems.toString(),
-                                style: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Raleway',
-                                      color: Colors.white,
-                                      fontSize: 9.0,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                              showBadge: true,
-                              shape: badges.BadgeShape.circle,
-                              badgeColor: const Color(0xFFCB4D15),
-                              elevation: 4.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 8.0, 8.0, 8.0),
-                              position: badges.BadgePosition.topStart(),
-                              animationType: badges.BadgeAnimationType.scale,
-                              toAnimate: true,
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed('MyCart');
-                                },
-                                child: FaIcon(
-                                  FontAwesomeIcons.shoppingCart,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  size: 23.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                     Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
@@ -197,7 +122,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                 topRight: Radius.circular(16.0),
                               ),
                               border: Border.all(
-                                color: const Color(0xFFE35719),
+                                color: FlutterFlowTheme.of(context).primary,
                                 width: 6.0,
                               ),
                             ),
@@ -211,13 +136,20 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Rubik',
+                                    fontFamily: 'Rubik',
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    fontSize: 30.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                    shadows: [
+                                      Shadow(
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontSize: 30.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                            .secondaryText,
+                                        offset: const Offset(2.0, 2.0),
+                                        blurRadius: 2.0,
+                                      )
+                                    ],
+                                  ),
                                 ),
                                 Text(
                                   'For your consultation',
@@ -226,7 +158,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                       .override(
                                         fontFamily: 'Mukta',
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                            .secondaryText,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w300,
@@ -291,8 +223,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                 topRight: Radius.circular(16.0),
                               ),
                               border: Border.all(
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
+                                color: FlutterFlowTheme.of(context).primary,
                                 width: 6.0,
                               ),
                             ),
@@ -306,13 +237,20 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Rubik',
+                                    fontFamily: 'Rubik',
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    fontSize: 30.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                    shadows: [
+                                      Shadow(
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontSize: 30.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                            .secondaryText,
+                                        offset: const Offset(2.0, 2.0),
+                                        blurRadius: 2.0,
+                                      )
+                                    ],
+                                  ),
                                 ),
                                 Text(
                                   'View your bookings',
@@ -321,7 +259,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                       .override(
                                         fontFamily: 'Mukta',
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                            .secondaryText,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w300,
