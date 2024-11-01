@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'registration_widget.dart' show RegistrationWidget;
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,15 @@ class RegistrationModel extends FlutterFlowModel<RegistrationWidget> {
   FocusNode? phoneNumberFocusNode;
   TextEditingController? phoneNumberTextController;
   String? Function(BuildContext, String?)? phoneNumberTextControllerValidator;
+  // State field(s) for Province widget.
+  String? provinceValue;
+  FormFieldController<String>? provinceValueController;
+  // State field(s) for city widget.
+  String? cityValue;
+  FormFieldController<String>? cityValueController;
+  // State field(s) for Surbub widget.
+  String? surbubValue;
+  FormFieldController<String>? surbubValueController;
 
   @override
   void initState(BuildContext context) {}

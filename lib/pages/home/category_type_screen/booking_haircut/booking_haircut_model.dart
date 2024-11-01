@@ -2,10 +2,10 @@ import '/components/nav_back_widget.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'booking_widget.dart' show BookingWidget;
+import 'booking_haircut_widget.dart' show BookingHaircutWidget;
 import 'package:flutter/material.dart';
 
-class BookingModel extends FlutterFlowModel<BookingWidget> {
+class BookingHaircutModel extends FlutterFlowModel<BookingHaircutWidget> {
   ///  Local state fields for this page.
 
   DateTime? start;

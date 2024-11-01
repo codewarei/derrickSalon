@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = derrickBarberFirebaseUserStream()
+    userStream = masterSalonFirebaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
       });
@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'DerrickBarber',
+      title: 'MasterSalon',
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -129,6 +129,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'HomePage': const HomePageWidget(),
       'BookingHome': const BookingHomeWidget(),
       'Profile': const ProfileWidget(),
+      'Category': const CategoryWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -169,6 +170,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 40.0,
             ),
             label: 'Profile',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.home,
+              size: 40.0,
+            ),
+            label: 'Home',
             tooltip: '',
           )
         ],

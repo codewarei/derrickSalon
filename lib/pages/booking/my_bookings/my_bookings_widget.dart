@@ -91,7 +91,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                             child: TabBar(
                               labelColor: FlutterFlowTheme.of(context).primary,
                               unselectedLabelColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FlutterFlowTheme.of(context).primary,
                               labelStyle: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -248,8 +248,8 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 20.0, 8.0, 0.0),
                                         child:
-                                            FutureBuilder<List<BookingsRecord>>(
-                                          future: queryBookingsRecordOnce(
+                                            StreamBuilder<List<BookingsRecord>>(
+                                          stream: queryBookingsRecord(
                                             queryBuilder: (bookingsRecord) =>
                                                 bookingsRecord
                                                     .where(
@@ -259,10 +259,8 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                     )
                                                     .where(
                                                       'type',
-                                                      isEqualTo:
-                                                          Role.admin.name,
-                                                    )
-                                                    .orderBy('time'),
+                                                      isEqualTo: Role.user.name,
+                                                    ),
                                           ),
                                           builder: (context, snapshot) {
                                             // Customize what your widget looks like when it's loading.
@@ -362,19 +360,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                               BoxDecoration(
                                                             color: FlutterFlowTheme
                                                                     .of(context)
-                                                                .primary,
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                blurRadius: 0.0,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryBackground,
-                                                                offset: const Offset(
-                                                                  0.0,
-                                                                  1.0,
-                                                                ),
-                                                              )
-                                                            ],
+                                                                .secondaryBackground,
                                                             borderRadius:
                                                                 const BorderRadius
                                                                     .only(
@@ -746,7 +732,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
 
                                                 return Material(
                                                   color: Colors.transparent,
-                                                  elevation: 5.0,
+                                                  elevation: 10.0,
                                                   shape: const RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.only(
@@ -763,22 +749,9 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                   child: Container(
                                                     width: double.infinity,
                                                     decoration: BoxDecoration(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          blurRadius: 0.0,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
-                                                          offset: const Offset(
-                                                            0.0,
-                                                            1.0,
-                                                          ),
-                                                        )
-                                                      ],
+                                                      color: FlutterFlowTheme
+                                                              .of(context)
+                                                          .secondaryBackground,
                                                       borderRadius:
                                                           const BorderRadius.only(
                                                         bottomLeft:
@@ -795,9 +768,11 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                                                                 20.0),
                                                       ),
                                                       border: Border.all(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .tertiary,
+                                                        width: 2.0,
                                                       ),
                                                     ),
                                                     child: Padding(

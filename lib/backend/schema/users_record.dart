@@ -76,6 +76,21 @@ class UsersRecord extends FirestoreRecord {
   String get displayName => _displayName ?? '';
   bool hasDisplayName() => _displayName != null;
 
+  // "province" field.
+  String? _province;
+  String get province => _province ?? '';
+  bool hasProvince() => _province != null;
+
+  // "city" field.
+  String? _city;
+  String get city => _city ?? '';
+  bool hasCity() => _city != null;
+
+  // "surbub" field.
+  String? _surbub;
+  String get surbub => _surbub ?? '';
+  bool hasSurbub() => _surbub != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _photoUrl = snapshotData['photo_url'] as String?;
@@ -89,6 +104,9 @@ class UsersRecord extends FirestoreRecord {
     _password = snapshotData['password'] as String?;
     _lastActiveTime = snapshotData['last_active_time'] as DateTime?;
     _displayName = snapshotData['display_name'] as String?;
+    _province = snapshotData['province'] as String?;
+    _city = snapshotData['city'] as String?;
+    _surbub = snapshotData['surbub'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -137,6 +155,9 @@ Map<String, dynamic> createUsersRecordData({
   String? password,
   DateTime? lastActiveTime,
   String? displayName,
+  String? province,
+  String? city,
+  String? surbub,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -152,6 +173,9 @@ Map<String, dynamic> createUsersRecordData({
       'password': password,
       'last_active_time': lastActiveTime,
       'display_name': displayName,
+      'province': province,
+      'city': city,
+      'surbub': surbub,
     }.withoutNulls,
   );
 
@@ -174,7 +198,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.role == e2?.role &&
         e1?.password == e2?.password &&
         e1?.lastActiveTime == e2?.lastActiveTime &&
-        e1?.displayName == e2?.displayName;
+        e1?.displayName == e2?.displayName &&
+        e1?.province == e2?.province &&
+        e1?.city == e2?.city &&
+        e1?.surbub == e2?.surbub;
   }
 
   @override
@@ -190,7 +217,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.role,
         e?.password,
         e?.lastActiveTime,
-        e?.displayName
+        e?.displayName,
+        e?.province,
+        e?.city,
+        e?.surbub
       ]);
 
   @override

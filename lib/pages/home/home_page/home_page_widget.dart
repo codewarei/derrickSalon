@@ -108,7 +108,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         context.pushNamed(
-                          'Booking',
+                          'Category',
                           extra: <String, dynamic>{
                             kTransitionInfoKey: const TransitionInfo(
                               hasTransition: true,
@@ -195,12 +195,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 5.0, 0.0),
                                   child: Text(
-                                    'For your haircut',
+                                    'Book for a Salon appointment',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Mukta',
-                                          color: const Color(0xAEFFFFFF),
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
                                           fontSize: 20.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w300,

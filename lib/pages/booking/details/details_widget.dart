@@ -107,7 +107,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.network(
-                    'https://images.unsplash.com/photo-1727075252960-7eeff88ae038?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D',
+                    'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
                   ).image,
                 ),
               ),
@@ -552,7 +552,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                 fontFamily: 'Raleway',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
+                                                        .primaryText,
                                                 letterSpacing: 0.0,
                                               ),
                                         ),

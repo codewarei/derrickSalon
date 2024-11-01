@@ -159,6 +159,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'TypeDetails',
           path: '/typeDetails',
           builder: (context, params) => const TypeDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'Category',
+          path: '/category',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'Category')
+              : const CategoryWidget(),
+        ),
+        FFRoute(
+          name: 'BookingHaircut',
+          path: '/bookingHaircut',
+          builder: (context, params) => const BookingHaircutWidget(),
+        ),
+        FFRoute(
+          name: 'BookingNails',
+          path: '/bookingNails',
+          builder: (context, params) => const BookingNailsWidget(),
+        ),
+        FFRoute(
+          name: 'BookingBraiding',
+          path: '/bookingBraiding',
+          builder: (context, params) => const BookingBraidingWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

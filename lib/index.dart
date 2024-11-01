@@ -18,3 +18,11 @@ export '/pages/profile/edit_profile/edit_profile_widget.dart'
     show EditProfileWidget;
 export '/type/type_screen/type_screen_widget.dart' show TypeScreenWidget;
 export '/type/type_details/type_details_widget.dart' show TypeDetailsWidget;
+export '/pages/home/category_type_screen/category/category_widget.dart'
+    show CategoryWidget;
+export '/pages/home/category_type_screen/booking_haircut/booking_haircut_widget.dart'
+    show BookingHaircutWidget;
+export '/pages/home/category_type_screen/booking_nails/booking_nails_widget.dart'
+    show BookingNailsWidget;
+export '/pages/home/category_type_screen/booking_braiding/booking_braiding_widget.dart'
+    show BookingBraidingWidget;

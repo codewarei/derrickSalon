@@ -74,7 +74,7 @@ class _NavBackWidgetState extends State<NavBackWidget> {
                 },
                 child: Icon(
                   Icons.chevron_left_rounded,
-                  color: FlutterFlowTheme.of(context).secondary,
+                  color: FlutterFlowTheme.of(context).secondaryText,
                   size: 40.0,
                 ),
               ),

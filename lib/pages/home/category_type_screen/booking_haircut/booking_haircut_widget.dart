@@ -13,26 +13,26 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'booking_model.dart';
-export 'booking_model.dart';
+import 'booking_haircut_model.dart';
+export 'booking_haircut_model.dart';
 
-class BookingWidget extends StatefulWidget {
-  const BookingWidget({super.key});
+class BookingHaircutWidget extends StatefulWidget {
+  const BookingHaircutWidget({super.key});
 
   @override
-  State<BookingWidget> createState() => _BookingWidgetState();
+  State<BookingHaircutWidget> createState() => _BookingHaircutWidgetState();
 }
 
-class _BookingWidgetState extends State<BookingWidget>
+class _BookingHaircutWidgetState extends State<BookingHaircutWidget>
     with TickerProviderStateMixin {
-  late BookingModel _model;
+  late BookingHaircutModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => BookingModel());
+    _model = createModel(context, () => BookingHaircutModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -90,7 +90,7 @@ class _BookingWidgetState extends State<BookingWidget>
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
                         child: const NavBackWidget(
-                          navName: 'Booking',
+                          navName: 'Booking Haircut',
                         ),
                       ),
                     ),
