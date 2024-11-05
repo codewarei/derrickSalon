@@ -260,7 +260,7 @@ class _CategoryWidgetState extends State<CategoryWidget>
                                         alignment:
                                             const AlignmentDirectional(0.0, 0.0),
                                         child: FaIcon(
-                                          FontAwesomeIcons.chair,
+                                          FontAwesomeIcons.ankh,
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
                                           size: 50.0,
@@ -420,7 +420,7 @@ class _CategoryWidgetState extends State<CategoryWidget>
                                         alignment:
                                             const AlignmentDirectional(0.0, 0.0),
                                         child: FaIcon(
-                                          FontAwesomeIcons.chair,
+                                          FontAwesomeIcons.airbnb,
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
                                           size: 50.0,
@@ -575,7 +575,8 @@ class _CategoryWidgetState extends State<CategoryWidget>
                                       ),
                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: FaIcon(
-                                        FontAwesomeIcons.chair,
+                                        FontAwesomeIcons
+                                            .assistiveListeningSystems,
                                         color: FlutterFlowTheme.of(context)
                                             .secondary,
                                         size: 50.0,

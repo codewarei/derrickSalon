@@ -90,7 +90,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
                         child: const NavBackWidget(
-                          navName: 'Booking Nails',
+                          navName: 'Nails',
                         ),
                       ),
                     ),

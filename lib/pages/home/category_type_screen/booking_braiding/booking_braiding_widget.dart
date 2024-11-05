@@ -90,7 +90,7 @@ class _BookingBraidingWidgetState extends State<BookingBraidingWidget>
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
                         child: const NavBackWidget(
-                          navName: 'Booking Braiding',
+                          navName: 'Braiding',
                         ),
                       ),
                     ),

@@ -90,7 +90,7 @@ class _BookingHaircutWidgetState extends State<BookingHaircutWidget>
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
                         child: const NavBackWidget(
-                          navName: 'Booking Haircut',
+                          navName: 'Haircut',
                         ),
                       ),
                     ),
