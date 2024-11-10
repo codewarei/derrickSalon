@@ -128,6 +128,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': const HomePageWidget(),
       'BookingHome': const BookingHomeWidget(),
+      'Users': const UsersWidget(),
       'Profile': const ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -161,6 +162,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 40.0,
             ),
             label: 'Consultation',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people_alt_rounded,
+              size: 40.0,
+            ),
+            label: 'Barbers',
             tooltip: '',
           ),
           BottomNavigationBarItem(
