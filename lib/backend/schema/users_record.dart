@@ -91,6 +91,21 @@ class UsersRecord extends FirestoreRecord {
   String get surbub => _surbub ?? '';
   bool hasSurbub() => _surbub != null;
 
+  // "image1" field.
+  String? _image1;
+  String get image1 => _image1 ?? '';
+  bool hasImage1() => _image1 != null;
+
+  // "image2" field.
+  String? _image2;
+  String get image2 => _image2 ?? '';
+  bool hasImage2() => _image2 != null;
+
+  // "image3" field.
+  String? _image3;
+  String get image3 => _image3 ?? '';
+  bool hasImage3() => _image3 != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _photoUrl = snapshotData['photo_url'] as String?;
@@ -107,6 +122,9 @@ class UsersRecord extends FirestoreRecord {
     _province = snapshotData['province'] as String?;
     _city = snapshotData['city'] as String?;
     _surbub = snapshotData['surbub'] as String?;
+    _image1 = snapshotData['image1'] as String?;
+    _image2 = snapshotData['image2'] as String?;
+    _image3 = snapshotData['image3'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -158,6 +176,9 @@ Map<String, dynamic> createUsersRecordData({
   String? province,
   String? city,
   String? surbub,
+  String? image1,
+  String? image2,
+  String? image3,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -176,6 +197,9 @@ Map<String, dynamic> createUsersRecordData({
       'province': province,
       'city': city,
       'surbub': surbub,
+      'image1': image1,
+      'image2': image2,
+      'image3': image3,
     }.withoutNulls,
   );
 
@@ -201,7 +225,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.displayName == e2?.displayName &&
         e1?.province == e2?.province &&
         e1?.city == e2?.city &&
-        e1?.surbub == e2?.surbub;
+        e1?.surbub == e2?.surbub &&
+        e1?.image1 == e2?.image1 &&
+        e1?.image2 == e2?.image2 &&
+        e1?.image3 == e2?.image3;
   }
 
   @override
@@ -220,7 +247,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.displayName,
         e?.province,
         e?.city,
-        e?.surbub
+        e?.surbub,
+        e?.image1,
+        e?.image2,
+        e?.image3
       ]);
 
   @override
