@@ -163,9 +163,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Category',
           path: '/category',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Category')
-              : const CategoryWidget(),
+          builder: (context, params) => const CategoryWidget(),
         ),
         FFRoute(
           name: 'BookingHaircut',

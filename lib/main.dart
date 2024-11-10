@@ -129,7 +129,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'HomePage': const HomePageWidget(),
       'BookingHome': const BookingHomeWidget(),
       'Profile': const ProfileWidget(),
-      'Category': const CategoryWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -170,14 +169,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 40.0,
             ),
             label: 'Profile',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.home,
-              size: 40.0,
-            ),
-            label: 'Home',
             tooltip: '',
           )
         ],
