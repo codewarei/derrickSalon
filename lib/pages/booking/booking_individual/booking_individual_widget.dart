@@ -259,12 +259,12 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                MainAxisAlignment.start,
                                             children: [
                                               Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 20.0, 0.0, 10.0),
+                                                        0.0, 10.0, 0.0, 10.0),
                                                 child: InkWell(
                                                   splashColor:
                                                       Colors.transparent,
@@ -322,7 +322,7 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .primaryText,
-                                                            fontSize: 13.0,
+                                                            fontSize: 15.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -336,7 +336,7 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily: 'Raleway',
-                                                          fontSize: 13.0,
+                                                          fontSize: 15.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
