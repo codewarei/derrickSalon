@@ -191,23 +191,22 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(2.0),
-                                  child: Container(
-                                    width: 90.0,
-                                    height: 90.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration:
-                                          const Duration(milliseconds: 500),
-                                      fadeOutDuration:
-                                          const Duration(milliseconds: 500),
-                                      imageUrl: valueOrDefault<String>(
-                                        _model.uploadedFileUrl2,
-                                        'https://cdn.vectorstock.com/i/500p/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg',
+                                  child: AuthUserStreamWidget(
+                                    builder: (context) => Container(
+                                      width: 90.0,
+                                      height: 90.0,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
                                       ),
-                                      fit: BoxFit.fitWidth,
+                                      child: CachedNetworkImage(
+                                        fadeInDuration:
+                                            const Duration(milliseconds: 500),
+                                        fadeOutDuration:
+                                            const Duration(milliseconds: 500),
+                                        imageUrl: currentUserPhoto,
+                                        fit: BoxFit.fitWidth,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -1028,7 +1027,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         await currentUserReference!
                             .update(createUsersRecordData(
                           name: _model.yourNameTextController.text,
-                          photoUrl: _model.uploadedFileUrl2,
+                          photoUrl: _model.uploadedFileUrl1,
                           phoneNumber: _model.phoneNumberTextController2.text,
                           surname: '',
                           image1: _model.uploadedFileUrl3,
