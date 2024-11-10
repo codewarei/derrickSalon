@@ -8,8 +8,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'registration_model.dart';
 export 'registration_model.dart';
 
@@ -74,14 +72,14 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                 ).image,
               ),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: BackdropFilter(
               filter: ImageFilter.blur(
                 sigmaX: 2.0,
                 sigmaY: 5.0,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -93,9 +91,9 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -118,7 +116,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Text(
                               'Complete Profile',
                               style: FlutterFlowTheme.of(context)
@@ -133,7 +131,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                   Shadow(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
-                                    offset: Offset(2.0, 2.0),
+                                    offset: const Offset(2.0, 2.0),
                                     blurRadius: 2.0,
                                   )
                                 ],
@@ -141,7 +139,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Text(
                               'Please fill your details to comlete the sign up',
                               style: FlutterFlowTheme.of(context)
@@ -156,7 +154,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                   Shadow(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
-                                    offset: Offset(2.0, 2.0),
+                                    offset: const Offset(2.0, 2.0),
                                     blurRadius: 2.0,
                                   )
                                 ],
@@ -167,11 +165,11 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Material(
                           color: Colors.transparent,
                           elevation: 10.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(5.0),
                               bottomRight: Radius.circular(5.0),
@@ -183,7 +181,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(5.0),
                                 bottomRight: Radius.circular(5.0),
                                 topLeft: Radius.circular(20.0),
@@ -195,18 +193,18 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -220,7 +218,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -235,7 +233,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -247,7 +245,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -261,7 +259,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: TextFormField(
@@ -327,12 +325,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -346,21 +344,21 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
                                             topRight: Radius.circular(12.0),
                                           ),
                                           border: Border.all(
-                                            color: Color(0x9AFFFFFF),
+                                            color: const Color(0x9AFFFFFF),
                                           ),
                                         ),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -372,7 +370,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -386,7 +384,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: TextFormField(
@@ -450,12 +448,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -469,7 +467,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -484,7 +482,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -496,7 +494,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -510,7 +508,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: TextFormField(
@@ -573,12 +571,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -592,7 +590,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -607,7 +605,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -619,7 +617,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -633,7 +631,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: TextFormField(
@@ -697,12 +695,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -716,7 +714,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -731,7 +729,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -743,7 +741,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -757,7 +755,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: TextFormField(
@@ -823,12 +821,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -842,7 +840,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -857,7 +855,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -869,7 +867,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -883,7 +881,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child:
@@ -892,7 +890,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                           .provinceValueController ??=
                                                       FormFieldController<
                                                           String>(null),
-                                                  options: [
+                                                  options: const [
                                                     'Gauteng',
                                                     'Eastern Cape',
                                                     'Free State',
@@ -936,7 +934,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                       Colors.transparent,
                                                   borderWidth: 0.0,
                                                   borderRadius: 8.0,
-                                                  margin: EdgeInsetsDirectional
+                                                  margin: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   hidesUnderline: true,
@@ -952,12 +950,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -971,7 +969,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -986,7 +984,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -998,7 +996,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -1012,7 +1010,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child:
@@ -1021,7 +1019,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                           .cityValueController ??=
                                                       FormFieldController<
                                                           String>(null),
-                                                  options: [
+                                                  options: const [
                                                     'Johannesburg',
                                                     'Ekurhuleni',
                                                     'Tshwane',
@@ -1060,7 +1058,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                       Colors.transparent,
                                                   borderWidth: 0.0,
                                                   borderRadius: 8.0,
-                                                  margin: EdgeInsetsDirectional
+                                                  margin: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   hidesUnderline: true,
@@ -1076,12 +1074,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 10.0,
-                                      shape: RoundedRectangleBorder(
+                                      shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
@@ -1095,7 +1093,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
@@ -1110,7 +1108,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 5.0, 0.0),
                                               child: Icon(
@@ -1122,7 +1120,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Container(
                                                 width: 1.0,
@@ -1136,7 +1134,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                             ),
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child:
@@ -1148,7 +1146,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                     _model.surbubValue ??=
                                                         'Gauteng',
                                                   ),
-                                                  options: [
+                                                  options: const [
                                                     'Alexandra',
                                                     'Diepsloot',
                                                     'Ennerdale',
@@ -1197,7 +1195,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                       Colors.transparent,
                                                   borderWidth: 0.0,
                                                   borderRadius: 8.0,
-                                                  margin: EdgeInsetsDirectional
+                                                  margin: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   hidesUnderline: true,
@@ -1220,14 +1218,14 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             GoRouter.of(context).prepareAuthEvent();
                             if (_model.passwordTextController.text !=
                                 _model.passwordTextController.text) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   content: Text(
                                     'Passwords don\'t match!',
                                   ),
@@ -1270,9 +1268,9 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 55.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
@@ -1289,7 +1287,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                 Shadow(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  offset: Offset(2.0, 2.0),
+                                  offset: const Offset(2.0, 2.0),
                                   blurRadius: 2.0,
                                 )
                               ],

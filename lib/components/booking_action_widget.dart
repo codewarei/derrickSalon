@@ -7,11 +7,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'booking_action_model.dart';
 export 'booking_action_model.dart';
 
@@ -68,7 +65,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
             'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
           ).image,
         ),
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(20.0),
@@ -83,7 +80,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
             sigmaY: 2.0,
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +95,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
                         'Book your consultation',
                         style: FlutterFlowTheme.of(context).titleLarge.override(
@@ -110,7 +107,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                           shadows: [
                             Shadow(
                               color: FlutterFlowTheme.of(context).secondaryText,
-                              offset: Offset(2.0, 2.0),
+                              offset: const Offset(2.0, 2.0),
                               blurRadius: 2.0,
                             )
                           ],
@@ -118,7 +115,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                       ),
                     ),
                     Text(
-                      'Book with ${widget!.user}',
+                      'Book with ${widget.user}',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).alternate,
@@ -128,14 +125,14 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                         shadows: [
                           Shadow(
                             color: FlutterFlowTheme.of(context).secondaryText,
-                            offset: Offset(2.0, 2.0),
+                            offset: const Offset(2.0, 2.0),
                             blurRadius: 2.0,
                           )
                         ],
                       ),
                     ),
                     Text(
-                      ' at ${dateTimeFormat("M/d h:mm a", widget!.time)}',
+                      ' at ${dateTimeFormat("M/d h:mm a", widget.time)}',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -145,7 +142,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                         shadows: [
                           Shadow(
                             color: FlutterFlowTheme.of(context).secondaryText,
-                            offset: Offset(2.0, 2.0),
+                            offset: const Offset(2.0, 2.0),
                             blurRadius: 2.0,
                           )
                         ],
@@ -154,17 +151,17 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                   ],
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0x96FFFFFF),
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -185,7 +182,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                     Shadow(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      offset: Offset(2.0, 2.0),
+                                      offset: const Offset(2.0, 2.0),
                                       blurRadius: 2.0,
                                     )
                                   ],
@@ -224,7 +221,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                         ),
                         if (_model.typeValue == 'Style')
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -243,7 +240,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                       Shadow(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        offset: Offset(2.0, 2.0),
+                                        offset: const Offset(2.0, 2.0),
                                         blurRadius: 2.0,
                                       )
                                     ],
@@ -292,7 +289,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                       child: Text(
                         'Addictional Information',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -304,14 +301,14 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                           shadows: [
                             Shadow(
                               color: FlutterFlowTheme.of(context).secondaryText,
-                              offset: Offset(2.0, 2.0),
+                              offset: const Offset(2.0, 2.0),
                               blurRadius: 2.0,
                             )
                           ],
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       child: TextFormField(
                         controller: _model.additionalInfoTextController,
@@ -334,14 +331,14 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0x00000000),
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0x00000000),
                               width: 1.0,
                             ),
@@ -378,7 +375,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 20.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       final paymentResponse = await processStripePayment(
@@ -409,15 +406,15 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                               color: FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
-                          duration: Duration(milliseconds: 4000),
+                          duration: const Duration(milliseconds: 4000),
                           backgroundColor:
                               FlutterFlowTheme.of(context).secondary,
                         ),
                       );
 
-                      await BookingsRecord.createDoc(widget!.userid!)
+                      await BookingsRecord.createDoc(widget.userid!)
                           .set(createBookingsRecordData(
-                        time: widget!.time,
+                        time: widget.time,
                         uid: currentUserReference,
                         type: _model.typeValue,
                         dye: _model.radioButtonValue,
@@ -425,10 +422,10 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                             _model.additionalInfoTextController.text,
                       ));
 
-                      await HistoryRecord.createDoc(widget!.userid!)
+                      await HistoryRecord.createDoc(widget.userid!)
                           .set(createHistoryRecordData(
                         uid: currentUserReference?.id,
-                        time: widget!.time,
+                        time: widget.time,
                       ));
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -440,7 +437,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                               fontSize: 18.0,
                             ),
                           ),
-                          duration: Duration(milliseconds: 4000),
+                          duration: const Duration(milliseconds: 4000),
                           backgroundColor: FlutterFlowTheme.of(context).success,
                         ),
                       );
@@ -452,9 +449,9 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                       width: double.infinity,
                       height: 60.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(

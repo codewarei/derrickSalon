@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'nav_back_model.dart';
 export 'nav_back_model.dart';
@@ -47,7 +46,7 @@ class _NavBackWidgetState extends State<NavBackWidget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,7 +82,7 @@ class _NavBackWidgetState extends State<NavBackWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.navName,
+              widget.navName,
               '-',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -110,7 +109,7 @@ class _NavBackWidgetState extends State<NavBackWidget> {
               shape: badges.BadgeShape.circle,
               badgeColor: FlutterFlowTheme.of(context).primary,
               elevation: 4.0,
-              padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
               position: badges.BadgePosition.topStart(),
               animationType: badges.BadgeAnimationType.scale,
               toAnimate: true,

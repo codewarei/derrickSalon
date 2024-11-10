@@ -10,8 +10,6 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'my_cart_model.dart';
 export 'my_cart_model.dart';
@@ -53,7 +51,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
               image: CachedNetworkImageProvider(
@@ -69,24 +67,24 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                 sigmaY: 2.0,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                       child: wrapWithModel(
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: NavBackWidget(
+                        child: const NavBackWidget(
                           navName: 'Cart',
                         ),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -111,19 +109,19 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 0.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 20.0,
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(5.0),
                                       bottomRight: Radius.circular(0.0),
@@ -137,7 +135,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      borderRadius: BorderRadius.only(
+                                      borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(5.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(5.0),
@@ -150,7 +148,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           1.0, 0.0, 0.0, 0.0),
                                       child: SingleChildScrollView(
                                         scrollDirection: Axis.horizontal,
@@ -160,7 +158,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 0.0, 0.0),
                                               child: Container(
@@ -171,7 +169,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                           context)
                                                       .primaryBackground,
                                                   borderRadius:
-                                                      BorderRadius.only(
+                                                      const BorderRadius.only(
                                                     bottomLeft:
                                                         Radius.circular(10.0),
                                                     bottomRight:
@@ -188,7 +186,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           1.0, 1.0, 1.0, 1.0),
                                                   child: InkWell(
@@ -212,11 +210,11 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                             image:
                                                                 CachedNetworkImage(
                                                               fadeInDuration:
-                                                                  Duration(
+                                                                  const Duration(
                                                                       milliseconds:
                                                                           500),
                                                               fadeOutDuration:
-                                                                  Duration(
+                                                                  const Duration(
                                                                       milliseconds:
                                                                           500),
                                                               imageUrl: '',
@@ -243,11 +241,11 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                         child:
                                                             CachedNetworkImage(
                                                           fadeInDuration:
-                                                              Duration(
+                                                              const Duration(
                                                                   milliseconds:
                                                                       500),
                                                           fadeOutDuration:
-                                                              Duration(
+                                                              const Duration(
                                                                   milliseconds:
                                                                       500),
                                                           imageUrl: '',
@@ -269,7 +267,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Row(
@@ -301,7 +299,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Row(
@@ -310,7 +308,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -324,7 +322,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                               .override(
                                                             fontFamily:
                                                                 'Raleway',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFFF1F4F8),
                                                             fontSize: 23.0,
                                                             letterSpacing: 0.0,
@@ -335,7 +333,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
-                                                                offset: Offset(
+                                                                offset: const Offset(
                                                                     2.0, 2.0),
                                                                 blurRadius: 2.0,
                                                               )
@@ -356,12 +354,12 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 0.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 5.0,
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(5.0),
@@ -373,8 +371,8 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                     width: 58.0,
                                     height: 90.0,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFFF1321),
-                                      borderRadius: BorderRadius.only(
+                                      color: const Color(0xFFFF1321),
+                                      borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(5.0),
                                         topLeft: Radius.circular(0.0),
@@ -386,7 +384,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                         width: 5.0,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: FaIcon(
                                       FontAwesomeIcons.trashAlt,
                                       color: FlutterFlowTheme.of(context)
@@ -401,14 +399,14 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                       child: Material(
                         color: Colors.transparent,
                         elevation: 5.0,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(10.0),
                             bottomRight: Radius.circular(10.0),
@@ -422,7 +420,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(10.0),
                               bottomRight: Radius.circular(10.0),
                               topLeft: Radius.circular(10.0),
@@ -435,14 +433,14 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 1.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -489,7 +487,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                     ],
                                   ),
                                 ),
-                                Opacity(
+                                const Opacity(
                                   opacity: 0.7,
                                   child: Divider(
                                     thickness: 1.0,
@@ -499,7 +497,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -547,7 +545,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 5.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -587,7 +585,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                             child: Padding(
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
-                                              child: SuccessWidget(),
+                                              child: const SuccessWidget(),
                                             ),
                                           );
                                         },
@@ -606,12 +604,12 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 50.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 16.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFFD12833),
+                                      color: const Color(0xFFD12833),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(

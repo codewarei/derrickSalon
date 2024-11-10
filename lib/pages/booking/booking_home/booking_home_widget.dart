@@ -2,13 +2,9 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'booking_home_model.dart';
 export 'booking_home_model.dart';
 
@@ -68,14 +64,14 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                 sigmaY: 2.0,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -85,7 +81,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                           context.pushNamed(
                             'Booking',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                                 duration: Duration(milliseconds: 500),
@@ -96,7 +92,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                         child: Material(
                           color: Colors.transparent,
                           elevation: 30.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16.0),
                               bottomRight: Radius.circular(16.0),
@@ -108,8 +104,8 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                             width: double.infinity,
                             height: 150.0,
                             decoration: BoxDecoration(
-                              color: Color(0x8FFFFFFF),
-                              boxShadow: [
+                              color: const Color(0x8FFFFFFF),
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -119,7 +115,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                   ),
                                 )
                               ],
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(16.0),
                                 bottomRight: Radius.circular(16.0),
                                 topLeft: Radius.circular(16.0),
@@ -130,7 +126,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                 width: 6.0,
                               ),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -149,7 +145,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                       Shadow(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        offset: Offset(2.0, 2.0),
+                                        offset: const Offset(2.0, 2.0),
                                         blurRadius: 2.0,
                                       )
                                     ],
@@ -176,7 +172,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -186,7 +182,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                           context.pushNamed(
                             'MyBookings',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                                 duration: Duration(milliseconds: 500),
@@ -197,7 +193,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                         child: Material(
                           color: Colors.transparent,
                           elevation: 40.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16.0),
                               bottomRight: Radius.circular(16.0),
@@ -209,8 +205,8 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                             width: double.infinity,
                             height: 150.0,
                             decoration: BoxDecoration(
-                              color: Color(0x8FFFFFFF),
-                              boxShadow: [
+                              color: const Color(0x8FFFFFFF),
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -220,7 +216,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                   ),
                                 )
                               ],
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(16.0),
                                 bottomRight: Radius.circular(16.0),
                                 topLeft: Radius.circular(16.0),
@@ -231,7 +227,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                 width: 6.0,
                               ),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -250,7 +246,7 @@ class _BookingHomeWidgetState extends State<BookingHomeWidget> {
                                       Shadow(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        offset: Offset(2.0, 2.0),
+                                        offset: const Offset(2.0, 2.0),
                                         blurRadius: 2.0,
                                       )
                                     ],

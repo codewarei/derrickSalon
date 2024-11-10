@@ -3,23 +3,16 @@ import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
 import '/components/booking_action_widget.dart';
 import '/components/nav_back_widget.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'booking_nails_model.dart';
 export 'booking_nails_model.dart';
 
@@ -85,27 +78,27 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                 sigmaY: 2.0,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
                       child: wrapWithModel(
                         model: _model.navBackModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: NavBackWidget(
+                        child: const NavBackWidget(
                           navName: 'Nails',
                         ),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: FlutterFlowChoiceChips(
-                        options: [
+                        options: const [
                           ChipData('Johannesburg'),
                           ChipData('Ekurhuleni'),
                           ChipData('Tshwane'),
@@ -211,11 +204,11 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                       child: Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 4.0, 0.0, 0.0),
                           child: TextFormField(
                             controller: _model.textController,
@@ -262,7 +255,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               filled: true,
-                              fillColor: Color(0x95FFFFFF),
+                              fillColor: const Color(0x95FFFFFF),
                               prefixIcon: Icon(
                                 Icons.search_outlined,
                                 color:
@@ -287,7 +280,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                         child: StreamBuilder<List<UsersRecord>>(
                           stream: queryUsersRecord(
                             queryBuilder: (usersRecord) =>
@@ -330,7 +323,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                 final listViewUsersRecord =
                                     listViewUsersRecordList[listViewIndex];
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 5.0, 5.0),
                                   child: Container(
                                     width: double.infinity,
@@ -345,10 +338,10 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                               MainAxisAlignment.start,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -370,12 +363,12 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 0.0)),
+                                          ].divide(const SizedBox(width: 0.0)),
                                         ),
                                         collapsed: Container(),
                                         expanded: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: StreamBuilder<
                                               List<BookingsRecord>>(
@@ -420,14 +413,14 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .alternate,
-                                                      offset: Offset(
+                                                      offset: const Offset(
                                                         0.0,
                                                         1.0,
                                                       ),
                                                     )
                                                   ],
                                                   borderRadius:
-                                                      BorderRadius.only(
+                                                      const BorderRadius.only(
                                                     bottomLeft:
                                                         Radius.circular(5.0),
                                                     bottomRight:
@@ -444,7 +437,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(8.0),
+                                                  padding: const EdgeInsets.all(8.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
@@ -502,7 +495,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             0.0,
@@ -544,7 +537,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -573,7 +566,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             4.0,
@@ -621,7 +614,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 5.0, 12.0, 5.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(12.0, 5.0, 12.0, 5.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -638,7 +631,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                                                                             onTap: () => FocusScope.of(context).unfocus(),
                                                                                             child: Padding(
                                                                                               padding: MediaQuery.viewInsetsOf(context),
-                                                                                              child: Container(
+                                                                                              child: SizedBox(
                                                                                                 height: 500.0,
                                                                                                 child: BookingActionWidget(
                                                                                                   user: listViewUsersRecord.name,
@@ -681,7 +674,7 @@ class _BookingNailsWidgetState extends State<BookingNailsWidget>
                                             },
                                           ),
                                         ),
-                                        theme: ExpandableThemeData(
+                                        theme: const ExpandableThemeData(
                                           tapHeaderToExpand: true,
                                           tapBodyToExpand: true,
                                           tapBodyToCollapse: true,

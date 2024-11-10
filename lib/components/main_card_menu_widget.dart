@@ -2,9 +2,6 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'main_card_menu_model.dart';
 export 'main_card_menu_model.dart';
 
@@ -62,14 +59,14 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
         width: 250.0,
         height: 230.0,
         decoration: BoxDecoration(
-          color: Color(0x68C6E4EC),
+          color: const Color(0x68C6E4EC),
           image: DecorationImage(
             fit: BoxFit.cover,
             image: Image.network(
               '',
             ).image,
           ),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4.0,
               color: Color(0x33000000),
@@ -103,23 +100,23 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
                     type: PageTransitionType.fade,
                     child: FlutterFlowExpandedImageView(
                       image: Image.network(
-                        widget!.image!,
+                        widget.image!,
                         fit: BoxFit.contain,
                       ),
                       allowRotation: false,
-                      tag: widget!.image!,
+                      tag: widget.image!,
                       useHeroAnimation: true,
                     ),
                   ),
                 );
               },
               child: Hero(
-                tag: widget!.image!,
+                tag: widget.image!,
                 transitionOnUserGestures: true,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(0.0),
                   child: Image.network(
-                    widget!.image!,
+                    widget.image!,
                     width: 241.0,
                     height: 120.0,
                     fit: BoxFit.cover,
@@ -132,10 +129,10 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.name,
+                      widget.name,
                       '-',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -148,10 +145,10 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                   child: Text(
                     formatNumber(
-                      widget!.pricw,
+                      widget.pricw,
                       formatType: FormatType.custom,
                       currency: 'R',
                       format: '',
@@ -169,7 +166,7 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -184,12 +181,12 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 5.0, 0.0),
                           child: Container(
                             width: 20.0,
@@ -227,10 +224,10 @@ class _MainCardMenuWidgetState extends State<MainCardMenuWidget> {
                       ],
                     ),
                   ),
-                ].divide(SizedBox(width: 4.0)),
+                ].divide(const SizedBox(width: 4.0)),
               ),
             ),
-          ].divide(SizedBox(height: 3.0)),
+          ].divide(const SizedBox(height: 3.0)),
         ),
       ),
     );

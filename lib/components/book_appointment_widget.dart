@@ -1,13 +1,9 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'book_appointment_model.dart';
 export 'book_appointment_model.dart';
 
@@ -16,7 +12,7 @@ class BookAppointmentWidget extends StatefulWidget {
     super.key,
     String? name,
     this.surname,
-  }) : this.name = name ?? '';
+  }) : name = name ?? '';
 
   final String name;
   final String? surname;
@@ -50,8 +46,8 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 900.0.ms,
-            begin: Offset(-100.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(-100.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -62,8 +58,8 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -80,11 +76,11 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
       child: Material(
         color: Colors.transparent,
         elevation: 10.0,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(16.0),
             bottomRight: Radius.circular(16.0),
@@ -97,19 +93,19 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
           height: 50.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).primary,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(16.0),
               bottomRight: Radius.circular(16.0),
               topLeft: Radius.circular(16.0),
               topRight: Radius.circular(16.0),
             ),
             border: Border.all(
-              color: Color(0xFFC6D9EC),
+              color: const Color(0xFFC6D9EC),
               width: 2.0,
             ),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +120,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                         fontWeight: FontWeight.w300,
                       ),
                 ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
-              ].divide(SizedBox(width: 10.0)),
+              ].divide(const SizedBox(width: 10.0)),
             ),
           ),
         ),

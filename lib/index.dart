@@ -28,3 +28,4 @@ export '/pages/home/category_type_screen/booking_braiding/booking_braiding_widge
     show BookingBraidingWidget;
 export '/pages/booking/booking_individual/booking_individual_widget.dart'
     show BookingIndividualWidget;
+export '/users/users_widget.dart' show UsersWidget;
