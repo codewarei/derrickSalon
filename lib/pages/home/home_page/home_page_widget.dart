@@ -108,7 +108,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         context.pushNamed(
-                          'Category',
+                          'Booking',
                           extra: <String, dynamic>{
                             kTransitionInfoKey: const TransitionInfo(
                               hasTransition: true,
