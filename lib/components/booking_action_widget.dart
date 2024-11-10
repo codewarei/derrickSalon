@@ -58,12 +58,20 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
     return Container(
       height: double.infinity,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).alternate,
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: Image.network(
-            'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
+          image: Image.asset(
+            'assets/images/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
           ).image,
+        ),
+        gradient: LinearGradient(
+          colors: [
+            FlutterFlowTheme.of(context).primary,
+            FlutterFlowTheme.of(context).secondary
+          ],
+          stops: const [0.0, 1.0],
+          begin: const AlignmentDirectional(0.0, -1.0),
+          end: const AlignmentDirectional(0, 1.0),
         ),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
@@ -87,7 +95,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
               children: [
                 FaIcon(
                   FontAwesomeIcons.table,
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).secondaryText,
                   size: 74.0,
                 ),
                 Column(
@@ -99,54 +107,35 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                       child: Text(
                         'Book your consultation',
                         style: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Outfit',
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          fontSize: 25.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.w500,
-                          shadows: [
-                            Shadow(
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              offset: const Offset(2.0, 2.0),
-                              blurRadius: 2.0,
-                            )
-                          ],
-                        ),
+                              fontFamily: 'Outfit',
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              fontSize: 25.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w500,
+                            ),
                       ),
                     ),
                     Text(
                       'Book with ${widget.user}',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                        fontFamily: 'Raleway',
-                        color: FlutterFlowTheme.of(context).alternate,
-                        fontSize: 25.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w800,
-                        shadows: [
-                          Shadow(
+                            fontFamily: 'Raleway',
                             color: FlutterFlowTheme.of(context).secondaryText,
-                            offset: const Offset(2.0, 2.0),
-                            blurRadius: 2.0,
-                          )
-                        ],
-                      ),
+                            fontSize: 25.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.w800,
+                          ),
                     ),
                     Text(
                       ' at ${dateTimeFormat("M/d h:mm a", widget.time)}',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                        fontFamily: 'Raleway',
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        fontSize: 25.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w800,
-                        shadows: [
-                          Shadow(
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            offset: const Offset(2.0, 2.0),
-                            blurRadius: 2.0,
-                          )
-                        ],
-                      ),
+                            fontFamily: 'Raleway',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            fontSize: 25.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.w800,
+                          ),
                     ),
                   ],
                 ),
@@ -162,7 +151,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                       children: [
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 10.0),
+                              0.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -172,21 +161,13 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                  fontFamily: 'Raleway',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 15.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                  shadows: [
-                                    Shadow(
+                                      fontFamily: 'Raleway',
                                       color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      offset: const Offset(2.0, 2.0),
-                                      blurRadius: 2.0,
-                                    )
-                                  ],
-                                ),
+                                          .primaryText,
+                                      fontSize: 13.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                               ),
                               FlutterFlowRadioButton(
                                 options: ['Bold ', 'Style'].toList(),
@@ -204,7 +185,9 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
+                                      fontSize: 13.0,
                                       letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                 buttonPosition: RadioButtonPosition.left,
                                 direction: Axis.horizontal,
@@ -232,19 +215,11 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                    fontFamily: 'Raleway',
-                                    fontSize: 15.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    shadows: [
-                                      Shadow(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        offset: const Offset(2.0, 2.0),
-                                        blurRadius: 2.0,
-                                      )
-                                    ],
-                                  ),
+                                        fontFamily: 'Raleway',
+                                        fontSize: 13.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w300,
+                                      ),
                                 ),
                                 FlutterFlowRadioButton(
                                   options: ['Yes', 'No'].toList(),
@@ -264,7 +239,9 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
+                                            fontSize: 13.0,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                   buttonPosition: RadioButtonPosition.left,
                                   direction: Axis.horizontal,
@@ -293,19 +270,12 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                       child: Text(
                         'Addictional Information',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Raleway',
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          fontSize: 15.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.w500,
-                          shadows: [
-                            Shadow(
+                              fontFamily: 'Raleway',
                               color: FlutterFlowTheme.of(context).secondaryText,
-                              offset: const Offset(2.0, 2.0),
-                              blurRadius: 2.0,
-                            )
-                          ],
-                        ),
+                              fontSize: 13.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w300,
+                            ),
                       ),
                     ),
                     SizedBox(
@@ -444,7 +414,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
 
                       safeSetState(() {});
                     },
-                    text: 'Book',
+                    text: 'Book Now',
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: 60.0,
@@ -452,18 +422,18 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                           const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FlutterFlowTheme.of(context).secondaryText,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Raleway',
-                                color: FlutterFlowTheme.of(context).secondary,
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 fontSize: 25.0,
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).secondary,
-                        width: 5.0,
+                        color: FlutterFlowTheme.of(context).primary,
+                        width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

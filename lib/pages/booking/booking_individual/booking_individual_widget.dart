@@ -301,59 +301,64 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                     ),
                                                   ),
                                                 ),
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  5.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        listViewUsersRecord
-                                                            .name,
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyLarge
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Raleway',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                  fontSize:
-                                                                      15.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 10.0, 0.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    0.0,
+                                                                    5.0,
+                                                                    0.0),
+                                                        child: Text(
+                                                          listViewUsersRecord
+                                                              .name,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyLarge
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Raleway',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontSize: 15.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                              ),
+                                                        ),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      listViewUsersRecord
-                                                          .surname,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Raleway',
-                                                            fontSize: 15.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                      Text(
+                                                        listViewUsersRecord
+                                                            .surname,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Raleway',
+                                                              fontSize: 15.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                            ),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                                 Align(
                                                   alignment:
@@ -434,107 +439,170 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                                   final availableSlotsItem =
                                                                       availableSlots[
                                                                           availableSlotsIndex];
-                                                                  return Container(
-                                                                    width: double
-                                                                        .infinity,
-                                                                    height:
-                                                                        50.0,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      boxShadow: const [
-                                                                        BoxShadow(
-                                                                          blurRadius:
-                                                                              4.0,
-                                                                          color:
-                                                                              Color(0x33000000),
-                                                                          offset:
-                                                                              Offset(
-                                                                            0.0,
-                                                                            2.0,
-                                                                          ),
-                                                                        )
-                                                                      ],
-                                                                      borderRadius:
-                                                                          const BorderRadius
-                                                                              .only(
-                                                                        bottomLeft:
-                                                                            Radius.circular(5.0),
-                                                                        bottomRight:
-                                                                            Radius.circular(5.0),
-                                                                        topLeft:
-                                                                            Radius.circular(5.0),
-                                                                        topRight:
-                                                                            Radius.circular(5.0),
-                                                                      ),
-                                                                      border:
-                                                                          Border
-                                                                              .all(
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .secondaryText,
-                                                                        width:
-                                                                            2.0,
-                                                                      ),
-                                                                    ),
+                                                                  return InkWell(
+                                                                    splashColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    focusColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    hoverColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    highlightColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    onTap:
+                                                                        () async {
+                                                                      await showModalBottomSheet(
+                                                                        isScrollControlled:
+                                                                            true,
+                                                                        backgroundColor:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                        enableDrag:
+                                                                            false,
+                                                                        context:
+                                                                            context,
+                                                                        builder:
+                                                                            (context) {
+                                                                          return GestureDetector(
+                                                                            onTap: () =>
+                                                                                FocusScope.of(context).unfocus(),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: MediaQuery.viewInsetsOf(context),
+                                                                              child: SizedBox(
+                                                                                height: 500.0,
+                                                                                child: BookingActionWidget(
+                                                                                  user: listViewUsersRecord.name,
+                                                                                  time: availableSlotsItem,
+                                                                                  userid: listViewUsersRecord.reference,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          );
+                                                                        },
+                                                                      ).then((value) =>
+                                                                          safeSetState(
+                                                                              () {}));
+                                                                    },
                                                                     child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          const AlignmentDirectional(
+                                                                        Material(
+                                                                      color: Colors
+                                                                          .transparent,
+                                                                      elevation:
+                                                                          1.0,
+                                                                      shape:
+                                                                          const RoundedRectangleBorder(
+                                                                        borderRadius:
+                                                                            BorderRadius.only(
+                                                                          bottomLeft:
+                                                                              Radius.circular(5.0),
+                                                                          bottomRight:
+                                                                              Radius.circular(5.0),
+                                                                          topLeft:
+                                                                              Radius.circular(5.0),
+                                                                          topRight:
+                                                                              Radius.circular(5.0),
+                                                                        ),
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        width: double
+                                                                            .infinity,
+                                                                        height:
+                                                                            50.0,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          boxShadow: const [
+                                                                            BoxShadow(
+                                                                              blurRadius: 4.0,
+                                                                              color: Color(0x33000000),
+                                                                              offset: Offset(
+                                                                                0.0,
+                                                                                2.0,
+                                                                              ),
+                                                                            )
+                                                                          ],
+                                                                          borderRadius:
+                                                                              const BorderRadius.only(
+                                                                            bottomLeft:
+                                                                                Radius.circular(5.0),
+                                                                            bottomRight:
+                                                                                Radius.circular(5.0),
+                                                                            topLeft:
+                                                                                Radius.circular(5.0),
+                                                                            topRight:
+                                                                                Radius.circular(5.0),
+                                                                          ),
+                                                                          border:
+                                                                              Border.all(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).alternate,
+                                                                            width:
+                                                                                2.0,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            Align(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            12.0,
-                                                                            5.0,
-                                                                            12.0,
-                                                                            5.0),
-                                                                        child:
-                                                                            InkWell(
-                                                                          splashColor:
-                                                                              Colors.transparent,
-                                                                          focusColor:
-                                                                              Colors.transparent,
-                                                                          hoverColor:
-                                                                              Colors.transparent,
-                                                                          highlightColor:
-                                                                              Colors.transparent,
-                                                                          onTap:
-                                                                              () async {
-                                                                            await showModalBottomSheet(
-                                                                              isScrollControlled: true,
-                                                                              backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                              enableDrag: false,
-                                                                              context: context,
-                                                                              builder: (context) {
-                                                                                return GestureDetector(
-                                                                                  onTap: () => FocusScope.of(context).unfocus(),
-                                                                                  child: Padding(
-                                                                                    padding: MediaQuery.viewInsetsOf(context),
-                                                                                    child: SizedBox(
-                                                                                      height: 500.0,
-                                                                                      child: BookingActionWidget(
-                                                                                        user: listViewUsersRecord.name,
-                                                                                        time: availableSlotsItem,
-                                                                                        userid: listViewUsersRecord.reference,
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                );
-                                                                              },
-                                                                            ).then((value) =>
-                                                                                safeSetState(() {}));
-                                                                          },
                                                                           child:
-                                                                              Text(
-                                                                            dateTimeFormat("jm",
-                                                                                availableSlotsItem),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                              Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                12.0,
+                                                                                5.0,
+                                                                                12.0,
+                                                                                5.0),
+                                                                            child:
+                                                                                InkWell(
+                                                                              splashColor: Colors.transparent,
+                                                                              focusColor: Colors.transparent,
+                                                                              hoverColor: Colors.transparent,
+                                                                              highlightColor: Colors.transparent,
+                                                                              onTap: () async {
+                                                                                await showModalBottomSheet(
+                                                                                  isScrollControlled: true,
+                                                                                  backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                  enableDrag: false,
+                                                                                  context: context,
+                                                                                  builder: (context) {
+                                                                                    return GestureDetector(
+                                                                                      onTap: () => FocusScope.of(context).unfocus(),
+                                                                                      child: Padding(
+                                                                                        padding: MediaQuery.viewInsetsOf(context),
+                                                                                        child: SizedBox(
+                                                                                          height: 500.0,
+                                                                                          child: BookingActionWidget(
+                                                                                            user: listViewUsersRecord.name,
+                                                                                            time: availableSlotsItem,
+                                                                                            userid: listViewUsersRecord.reference,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    );
+                                                                                  },
+                                                                                ).then((value) => safeSetState(() {}));
+                                                                              },
+                                                                              child: Text(
+                                                                                dateTimeFormat("jm", availableSlotsItem),
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Raleway',
-                                                                                  color: FlutterFlowTheme.of(context).secondary,
+                                                                                  color: FlutterFlowTheme.of(context).primary,
                                                                                   fontSize: 25.0,
                                                                                   letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
+                                                                                  fontWeight: FontWeight.bold,
+                                                                                  shadows: [
+                                                                                    Shadow(
+                                                                                      color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                      offset: const Offset(2.0, 2.0),
+                                                                                      blurRadius: 2.0,
+                                                                                    )
+                                                                                  ],
                                                                                 ),
+                                                                              ),
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
