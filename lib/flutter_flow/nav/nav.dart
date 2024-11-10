@@ -1,15 +1,22 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
+import '/backend/schema/enums/enums.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -74,47 +81,47 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const SignInPageWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : SignInPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const SignInPageWidget(),
+              appStateNotifier.loggedIn ? NavBarPage() : SignInPageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'HomePage')
-              : const HomePageWidget(),
+              ? NavBarPage(initialPage: 'HomePage')
+              : HomePageWidget(),
         ),
         FFRoute(
           name: 'Registration',
           path: '/registration',
-          builder: (context, params) => const RegistrationWidget(),
+          builder: (context, params) => RegistrationWidget(),
         ),
         FFRoute(
           name: 'SignInPage',
           path: '/signInPage',
-          builder: (context, params) => const SignInPageWidget(),
+          builder: (context, params) => SignInPageWidget(),
         ),
         FFRoute(
           name: 'Booking',
           path: '/booking',
-          builder: (context, params) => const BookingWidget(),
+          builder: (context, params) => BookingWidget(),
         ),
         FFRoute(
           name: 'Profile',
           path: '/profile',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'Profile')
-              : const ProfileWidget(),
+              ? NavBarPage(initialPage: 'Profile')
+              : ProfileWidget(),
         ),
         FFRoute(
           name: 'MyBookings',
           path: '/myBookings',
-          builder: (context, params) => const MyBookingsWidget(),
+          builder: (context, params) => MyBookingsWidget(),
         ),
         FFRoute(
           name: 'Details',
@@ -132,53 +139,67 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'BookingHome',
           path: '/bookingHome',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'BookingHome')
-              : const BookingHomeWidget(),
+              ? NavBarPage(initialPage: 'BookingHome')
+              : BookingHomeWidget(),
         ),
         FFRoute(
           name: 'HealerBookings',
           path: '/healerBookings',
-          builder: (context, params) => const HealerBookingsWidget(),
+          builder: (context, params) => HealerBookingsWidget(),
         ),
         FFRoute(
           name: 'MyCart',
           path: '/myCart',
-          builder: (context, params) => const MyCartWidget(),
+          builder: (context, params) => MyCartWidget(),
         ),
         FFRoute(
           name: 'EditProfile',
           path: '/editProfile',
-          builder: (context, params) => const EditProfileWidget(),
+          builder: (context, params) => EditProfileWidget(),
         ),
         FFRoute(
           name: 'TypeScreen',
           path: '/typeScreen',
-          builder: (context, params) => const TypeScreenWidget(),
+          builder: (context, params) => TypeScreenWidget(),
         ),
         FFRoute(
           name: 'TypeDetails',
           path: '/typeDetails',
-          builder: (context, params) => const TypeDetailsWidget(),
+          builder: (context, params) => TypeDetailsWidget(),
         ),
         FFRoute(
           name: 'Category',
           path: '/category',
-          builder: (context, params) => const CategoryWidget(),
+          builder: (context, params) => CategoryWidget(),
         ),
         FFRoute(
           name: 'BookingHaircut',
           path: '/bookingHaircut',
-          builder: (context, params) => const BookingHaircutWidget(),
+          builder: (context, params) => BookingHaircutWidget(),
         ),
         FFRoute(
           name: 'BookingNails',
           path: '/bookingNails',
-          builder: (context, params) => const BookingNailsWidget(),
+          builder: (context, params) => BookingNailsWidget(),
         ),
         FFRoute(
           name: 'BookingBraiding',
           path: '/bookingBraiding',
-          builder: (context, params) => const BookingBraidingWidget(),
+          builder: (context, params) => BookingBraidingWidget(),
+        ),
+        FFRoute(
+          name: 'BookingIndividual',
+          path: '/bookingIndividual',
+          builder: (context, params) => BookingIndividualWidget(
+            name: params.getParam(
+              'name',
+              ParamType.String,
+            ),
+            surname: params.getParam(
+              'surname',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -416,7 +437,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

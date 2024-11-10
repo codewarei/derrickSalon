@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'sign_in_page_model.dart';
 export 'sign_in_page_model.dart';
 
@@ -65,17 +67,17 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                 sigmaY: 2.0,
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                         child: Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           color: FlutterFlowTheme.of(context).primaryBackground,
@@ -96,7 +98,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,7 +118,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                 Shadow(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  offset: const Offset(2.0, 2.0),
+                                  offset: Offset(2.0, 2.0),
                                   blurRadius: 2.0,
                                 )
                               ],
@@ -135,7 +137,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                 Shadow(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  offset: const Offset(2.0, 2.0),
+                                  offset: Offset(2.0, 2.0),
                                   blurRadius: 2.0,
                                 )
                               ],
@@ -146,11 +148,11 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Material(
                         color: Colors.transparent,
                         elevation: 10.0,
-                        shape: const RoundedRectangleBorder(
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(20.0),
                             bottomRight: Radius.circular(20.0),
@@ -162,7 +164,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(20.0),
                               bottomRight: Radius.circular(20.0),
                               topLeft: Radius.circular(20.0),
@@ -174,18 +176,18 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 15.0, 0.0, 0.0),
                                   child: Material(
                                     color: Colors.transparent,
                                     elevation: 10.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(12.0),
                                         bottomRight: Radius.circular(12.0),
@@ -199,7 +201,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .tertiary,
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
                                           topLeft: Radius.circular(12.0),
@@ -215,7 +217,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 10.0, 0.0),
                                             child: Icon(
                                               Icons.email,
@@ -227,7 +229,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 0.0, 5.0, 0.0),
                                             child: Container(
                                               width: 1.0,
@@ -241,7 +243,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(8.0, 0.0, 8.0, 0.0),
                                               child: TextFormField(
                                                 controller:
@@ -304,12 +306,12 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 15.0, 0.0, 0.0),
                                   child: Material(
                                     color: Colors.transparent,
                                     elevation: 10.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(12.0),
                                         bottomRight: Radius.circular(12.0),
@@ -323,7 +325,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .tertiary,
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
                                           topLeft: Radius.circular(12.0),
@@ -339,7 +341,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 10.0, 0.0),
                                             child: Icon(
                                               Icons.lock,
@@ -351,7 +353,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 0.0, 5.0, 0.0),
                                             child: Container(
                                               width: 1.0,
@@ -365,7 +367,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(8.0, 0.0, 8.0, 0.0),
                                               child: TextFormField(
                                                 controller: _model
@@ -455,7 +457,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           GoRouter.of(context).prepareAuthEvent();
@@ -475,9 +477,9 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 55.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -493,7 +495,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                               Shadow(
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                offset: const Offset(2.0, 2.0),
+                                offset: Offset(2.0, 2.0),
                                 blurRadius: 2.0,
                               )
                             ],
@@ -514,10 +516,10 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -541,7 +543,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                 Shadow(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  offset: const Offset(2.0, 2.0),
+                                  offset: Offset(2.0, 2.0),
                                   blurRadius: 2.0,
                                 )
                               ],
@@ -552,13 +554,13 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 10.0, 0.0),
                             child: Theme(
                               data: ThemeData(
@@ -593,7 +595,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 5.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -613,14 +615,14 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                         Shadow(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          offset: const Offset(2.0, 2.0),
+                                          offset: Offset(2.0, 2.0),
                                           blurRadius: 2.0,
                                         )
                                       ],
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: Text(
                                       'I agree to Terms of use and Privacy policy of iMakhosi',
@@ -636,7 +638,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                                           Shadow(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
-                                            offset: const Offset(2.0, 2.0),
+                                            offset: Offset(2.0, 2.0),
                                             blurRadius: 2.0,
                                           )
                                         ],

@@ -1,17 +1,17 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/components/booking_action_widget.dart';
 import '/components/nav_back_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/booking/review/review_widget.dart';
 import 'dart:math';
 import 'dart:ui';
-import 'my_bookings_widget.dart' show MyBookingsWidget;
-import 'package:cached_network_image/cached_network_image.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
+import 'booking_individual_widget.dart' show BookingIndividualWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -19,36 +19,29 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class MyBookingsModel extends FlutterFlowModel<MyBookingsWidget> {
+class BookingIndividualModel extends FlutterFlowModel<BookingIndividualWidget> {
   ///  Local state fields for this page.
 
   DateTime? start;
 
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
   // Model for NavBack component.
   late NavBackModel navBackModel;
+  // State field(s) for Calendar widget.
+  DateTimeRange? calendarSelectedDay;
 
   @override
   void initState(BuildContext context) {
     navBackModel = createModel(context, () => NavBackModel());
+    calendarSelectedDay = DateTimeRange(
+      start: DateTime.now().startOfDay,
+      end: DateTime.now().endOfDay,
+    );
   }
 
   @override
   void dispose() {
-    tabBarController?.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
-
     navBackModel.dispose();
   }
 }

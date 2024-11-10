@@ -1,15 +1,17 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/components/book_appointment_widget.dart';
 import '/components/nav_back_widget.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'details_model.dart';
 export 'details_model.dart';
@@ -26,45 +28,15 @@ class DetailsWidget extends StatefulWidget {
   State<DetailsWidget> createState() => _DetailsWidgetState();
 }
 
-class _DetailsWidgetState extends State<DetailsWidget>
-    with TickerProviderStateMixin {
+class _DetailsWidgetState extends State<DetailsWidget> {
   late DetailsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => DetailsModel());
-
-    animationsMap.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 300.0.ms,
-            duration: 900.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
-          ),
-        ],
-      ),
-      'textOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 150.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-    });
   }
 
   @override
@@ -77,7 +49,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<UsersRecord>(
-      stream: UsersRecord.getDocument(widget.users!),
+      stream: UsersRecord.getDocument(widget!.users!),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -122,24 +94,24 @@ class _DetailsWidgetState extends State<DetailsWidget>
                     sigmaY: 2.0,
                   ),
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 40.0, 10.0, 0.0),
                             child: wrapWithModel(
                               model: _model.navBackModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: const NavBackWidget(
+                              child: NavBackWidget(
                                 navName: 'Details',
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Container(
                               width: 95.0,
@@ -152,20 +124,20 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: EdgeInsets.all(2.0),
                                 child: AuthUserStreamWidget(
                                   builder: (context) => Container(
                                     width: 90.0,
                                     height: 90.0,
                                     clipBehavior: Clip.antiAlias,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
                                     child: CachedNetworkImage(
                                       fadeInDuration:
-                                          const Duration(milliseconds: 500),
+                                          Duration(milliseconds: 500),
                                       fadeOutDuration:
-                                          const Duration(milliseconds: 500),
+                                          Duration(milliseconds: 500),
                                       imageUrl: currentUserPhoto,
                                       fit: BoxFit.fitWidth,
                                     ),
@@ -175,7 +147,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Container(
                               width: double.infinity,
@@ -187,10 +159,10 @@ class _DetailsWidgetState extends State<DetailsWidget>
                             ),
                           ),
                           Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 10.0),
                             child: Container(
                               width: double.infinity,
@@ -207,7 +179,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                   Material(
                                     color: Colors.transparent,
                                     elevation: 10.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(5.0),
                                         bottomRight: Radius.circular(5.0),
@@ -227,7 +199,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                             detailsUsersRecord.image1,
                                           ),
                                         ),
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(5.0),
                                           bottomRight: Radius.circular(5.0),
                                           topLeft: Radius.circular(5.0),
@@ -244,7 +216,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                   Material(
                                     color: Colors.transparent,
                                     elevation: 10.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(5.0),
                                         bottomRight: Radius.circular(5.0),
@@ -264,7 +236,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                             detailsUsersRecord.image2,
                                           ),
                                         ),
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(5.0),
                                           bottomRight: Radius.circular(5.0),
                                           topLeft: Radius.circular(5.0),
@@ -281,7 +253,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                   Material(
                                     color: Colors.transparent,
                                     elevation: 10.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(5.0),
                                         bottomRight: Radius.circular(5.0),
@@ -301,7 +273,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                             detailsUsersRecord.image3,
                                           ),
                                         ),
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(5.0),
                                           bottomRight: Radius.circular(5.0),
                                           topLeft: Radius.circular(5.0),
@@ -320,25 +292,24 @@ class _DetailsWidgetState extends State<DetailsWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 8.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                color: Color(0x93FFFFFF),
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).secondary,
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(12.0),
+                                padding: EdgeInsets.all(12.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 0.0, 8.0),
                                       child: Text(
                                         '${detailsUsersRecord.name} ${detailsUsersRecord.surname}',
@@ -355,7 +326,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
-                                              offset: const Offset(2.0, 2.0),
+                                              offset: Offset(2.0, 2.0),
                                               blurRadius: 2.0,
                                             )
                                           ],
@@ -363,11 +334,11 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 0.0),
                                       child: StreamBuilder<List<ReviewsRecord>>(
                                         stream: queryReviewsRecord(
-                                          parent: widget.users,
+                                          parent: widget!.users,
                                           singleRecord: true,
                                         ),
                                         builder: (context, snapshot) {
@@ -431,7 +402,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                     ),
                                     StreamBuilder<List<ReviewsRecord>>(
                                       stream: queryReviewsRecord(
-                                        parent: widget.users,
+                                        parent: widget!.users,
                                       ),
                                       builder: (context, snapshot) {
                                         // Customize what your widget looks like when it's loading.
@@ -478,9 +449,10 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily: 'Raleway',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -492,9 +464,10 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily: 'Raleway',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -505,7 +478,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                       },
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Material(
                                         color: Colors.transparent,
@@ -518,11 +491,11 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                           width: double.infinity,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x8FFFFFFF),
+                                            color: Color(0x8FFFFFFF),
                                             borderRadius:
                                                 BorderRadius.circular(12.0),
                                             border: Border.all(
-                                              color: const Color(0xFFC6D9EC),
+                                              color: Color(0xFFC6D9EC),
                                               width: 2.0,
                                             ),
                                           ),
@@ -540,7 +513,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   12.0,
@@ -558,7 +531,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -624,7 +597,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
@@ -640,7 +613,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -676,7 +649,7 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
                                         'Bio',
                                         style: FlutterFlowTheme.of(context)
@@ -693,9 +666,9 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 8.0, 0.0, 12.0),
                                         child: Text(
                                           'Dr. Will Hobbiton is a board-certified internal medicine specialist with over 15 years of experience treating patients in both hospital.',
@@ -712,71 +685,35 @@ class _DetailsWidgetState extends State<DetailsWidget>
                                         ),
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          20.0, 10.0, 20.0, 10.0),
-                                      child: Material(
-                                        color: Colors.transparent,
-                                        elevation: 10.0,
-                                        shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(16.0),
-                                            bottomRight: Radius.circular(16.0),
-                                            topLeft: Radius.circular(16.0),
-                                            topRight: Radius.circular(16.0),
-                                          ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                          'BookingIndividual',
+                                          queryParameters: {
+                                            'name': serializeParam(
+                                              detailsUsersRecord.name,
+                                              ParamType.String,
+                                            ),
+                                            'surname': serializeParam(
+                                              detailsUsersRecord.surname,
+                                              ParamType.String,
+                                            ),
+                                          }.withoutNulls,
+                                        );
+                                      },
+                                      child: wrapWithModel(
+                                        model: _model.bookAppointmentModel,
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: BookAppointmentWidget(
+                                          name: detailsUsersRecord.name,
+                                          surname: detailsUsersRecord.surname,
                                         ),
-                                        child: Container(
-                                          width: 200.0,
-                                          height: 50.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            borderRadius: const BorderRadius.only(
-                                              bottomLeft: Radius.circular(16.0),
-                                              bottomRight:
-                                                  Radius.circular(16.0),
-                                              topLeft: Radius.circular(16.0),
-                                              topRight: Radius.circular(16.0),
-                                            ),
-                                            border: Border.all(
-                                              color: const Color(0xFFC6D9EC),
-                                              width: 2.0,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 12.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                AutoSizeText(
-                                                  'Book Appointment',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w300,
-                                                      ),
-                                                ).animateOnPageLoad(animationsMap[
-                                                    'textOnPageLoadAnimation']!),
-                                              ].divide(const SizedBox(width: 10.0)),
-                                            ),
-                                          ),
-                                        ),
-                                      ).animateOnPageLoad(animationsMap[
-                                          'containerOnPageLoadAnimation']!),
+                                      ),
                                     ),
                                   ],
                                 ),

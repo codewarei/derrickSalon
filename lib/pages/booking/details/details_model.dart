@@ -1,7 +1,19 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/components/book_appointment_widget.dart';
 import '/components/nav_back_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import 'details_widget.dart' show DetailsWidget;
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailsModel extends FlutterFlowModel<DetailsWidget> {
   ///  State fields for stateful widgets in this page.
@@ -10,14 +22,18 @@ class DetailsModel extends FlutterFlowModel<DetailsWidget> {
   late NavBackModel navBackModel;
   // State field(s) for RatingBar widget.
   double? ratingBarValue;
+  // Model for bookAppointment component.
+  late BookAppointmentModel bookAppointmentModel;
 
   @override
   void initState(BuildContext context) {
     navBackModel = createModel(context, () => NavBackModel());
+    bookAppointmentModel = createModel(context, () => BookAppointmentModel());
   }
 
   @override
   void dispose() {
     navBackModel.dispose();
+    bookAppointmentModel.dispose();
   }
 }

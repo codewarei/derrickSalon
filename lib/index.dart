@@ -26,3 +26,5 @@ export '/pages/home/category_type_screen/booking_nails/booking_nails_widget.dart
     show BookingNailsWidget;
 export '/pages/home/category_type_screen/booking_braiding/booking_braiding_widget.dart'
     show BookingBraidingWidget;
+export '/pages/booking/booking_individual/booking_individual_widget.dart'
+    show BookingIndividualWidget;

@@ -1,9 +1,13 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'products_model.dart';
 export 'products_model.dart';
 
@@ -57,8 +61,8 @@ class _ProductsWidgetState extends State<ProductsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -81,12 +85,12 @@ class _ProductsWidgetState extends State<ProductsWidget>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 2.0,
               color: Color(0x520E151B),
@@ -98,7 +102,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
           ],
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: SizedBox(
+        child: Container(
           height: 300.0,
           child: Stack(
             children: [
@@ -106,7 +110,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
                 borderRadius: BorderRadius.circular(10.0),
                 child: Image.network(
                   valueOrDefault<String>(
-                    widget.image,
+                    widget!.image,
                     'https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png',
                   ),
                   width: double.infinity,
@@ -131,7 +135,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: const BorderRadius.only(
+                          borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(12.0),
                             bottomRight: Radius.circular(12.0),
                             topLeft: Radius.circular(0.0),
@@ -139,7 +143,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: EdgeInsets.all(12.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -151,7 +155,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
                                 children: [
                                   Text(
                                     valueOrDefault<String>(
-                                      widget.name,
+                                      widget!.name,
                                       '-',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -166,7 +170,7 @@ class _ProductsWidgetState extends State<ProductsWidget>
                                   ),
                                   Text(
                                     valueOrDefault<String>(
-                                      widget.price?.toString(),
+                                      widget!.price?.toString(),
                                       '0.0',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -182,11 +186,11 @@ class _ProductsWidgetState extends State<ProductsWidget>
                               ),
                               Flexible(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 5.0, 0.0, 0.0),
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget.details,
+                                      widget!.details,
                                       '-',
                                     ),
                                     style: FlutterFlowTheme.of(context)

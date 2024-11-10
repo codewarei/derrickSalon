@@ -1,10 +1,16 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -36,8 +42,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(98.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(98.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -75,14 +81,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 sigmaY: 2.0,
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -110,7 +116,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         context.pushNamed(
                           'Booking',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
+                            kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
@@ -121,7 +127,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       child: Material(
                         color: Colors.transparent,
                         elevation: 50.0,
-                        shape: const RoundedRectangleBorder(
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(16.0),
                             bottomRight: Radius.circular(16.0),
@@ -135,7 +141,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 color: Color(0x33000000),
                                 offset: Offset(
@@ -144,7 +150,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ),
                               )
                             ],
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16.0),
                               bottomRight: Radius.circular(16.0),
                               topLeft: Radius.circular(16.0),
@@ -156,7 +162,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               width: 2.0,
                             ),
                           ),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -175,7 +181,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     Shadow(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      offset: const Offset(2.0, 2.0),
+                                      offset: Offset(2.0, 2.0),
                                       blurRadius: 2.0,
                                     )
                                   ],
@@ -190,9 +196,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 lineStyle: DividerLineStyle.dashdotted,
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 5.0, 0.0),
                                   child: Text(
                                     'Book for a Salon appointment',
@@ -210,12 +216,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 20.0, 0.0, 0.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 50.0,
-                                  shape: const RoundedRectangleBorder(
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(16.0),
                                       bottomRight: Radius.circular(16.0),
@@ -235,7 +241,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
                                         ).image,
                                       ),
-                                      boxShadow: const [
+                                      boxShadow: [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -245,14 +251,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           ),
                                         )
                                       ],
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(16.0),
                                         bottomRight: Radius.circular(16.0),
                                         topLeft: Radius.circular(0.0),
                                         topRight: Radius.circular(0.0),
                                       ),
                                     ),
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
