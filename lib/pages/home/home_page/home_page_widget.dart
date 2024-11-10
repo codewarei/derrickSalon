@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'home_page_model.dart';
@@ -59,12 +60,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).alternate,
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: Image.network(
+              image: CachedNetworkImageProvider(
                 'https://images.unsplash.com/photo-1521134017679-e0adda02466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhcmJlcnxlbnwwfHwwfHx8MA%3D%3D',
-              ).image,
+              ),
             ),
           ),
           child: ClipRRect(
