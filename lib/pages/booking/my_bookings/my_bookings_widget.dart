@@ -91,7 +91,7 @@ class _MyBookingsWidgetState extends State<MyBookingsWidget>
                             child: TabBar(
                               labelColor: FlutterFlowTheme.of(context).primary,
                               unselectedLabelColor:
-                                  FlutterFlowTheme.of(context).primary,
+                                  FlutterFlowTheme.of(context).secondaryText,
                               labelStyle: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
