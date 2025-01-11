@@ -115,7 +115,9 @@ class UsersRecord extends FirestoreRecord {
     _name = snapshotData['name'] as String?;
     _surname = snapshotData['surname'] as String?;
     _isVarified = snapshotData['isVarified'] as bool?;
-    _role = deserializeEnum<Role>(snapshotData['role']);
+    _role = snapshotData['role'] is Role
+        ? snapshotData['role']
+        : deserializeEnum<Role>(snapshotData['role']);
     _password = snapshotData['password'] as String?;
     _lastActiveTime = snapshotData['last_active_time'] as DateTime?;
     _displayName = snapshotData['display_name'] as String?;

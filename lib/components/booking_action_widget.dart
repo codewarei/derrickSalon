@@ -406,6 +406,7 @@ class _BookingActionWidgetState extends State<BookingActionWidget> {
                               color: FlutterFlowTheme.of(context).secondary,
                               fontSize: 18.0,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                           duration: const Duration(milliseconds: 4000),
                           backgroundColor: FlutterFlowTheme.of(context).success,

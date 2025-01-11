@@ -56,7 +56,10 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -380,7 +383,7 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                                       .withoutNulls
                                                                       .toList(),
                                                                   _model.start!)
-                                                              .first),
+                                                              .firstOrNull),
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium
@@ -466,8 +469,11 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                                         builder:
                                                                             (context) {
                                                                           return GestureDetector(
-                                                                            onTap: () =>
-                                                                                FocusScope.of(context).unfocus(),
+                                                                            onTap:
+                                                                                () {
+                                                                              FocusScope.of(context).unfocus();
+                                                                              FocusManager.instance.primaryFocus?.unfocus();
+                                                                            },
                                                                             child:
                                                                                 Padding(
                                                                               padding: MediaQuery.viewInsetsOf(context),
@@ -569,7 +575,10 @@ class _BookingIndividualWidgetState extends State<BookingIndividualWidget>
                                                                                   context: context,
                                                                                   builder: (context) {
                                                                                     return GestureDetector(
-                                                                                      onTap: () => FocusScope.of(context).unfocus(),
+                                                                                      onTap: () {
+                                                                                        FocusScope.of(context).unfocus();
+                                                                                        FocusManager.instance.primaryFocus?.unfocus();
+                                                                                      },
                                                                                       child: Padding(
                                                                                         padding: MediaQuery.viewInsetsOf(context),
                                                                                         child: SizedBox(

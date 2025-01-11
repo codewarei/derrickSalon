@@ -54,7 +54,10 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
@@ -140,24 +143,28 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                           ),
                           Align(
                             alignment: const AlignmentDirectional(0.0, -1.0),
-                            child: Text(
-                              'Please fill your details to comlete the sign up',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                fontFamily: 'Raleway',
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                fontSize: 12.0,
-                                letterSpacing: 0.0,
-                                shadows: [
-                                  Shadow(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    offset: const Offset(2.0, 2.0),
-                                    blurRadius: 2.0,
-                                  )
-                                ],
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 5.0, 0.0, 0.0),
+                              child: Text(
+                                'Please fill your details to comlete the sign up',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                  fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  fontSize: 10.0,
+                                  letterSpacing: 0.0,
+                                  shadows: [
+                                    Shadow(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      offset: const Offset(2.0, 2.0),
+                                      blurRadius: 2.0,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -1144,7 +1151,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                       FormFieldController<
                                                           String>(
                                                     _model.surbubValue ??=
-                                                        'Gauteng',
+                                                        'Johannesburg',
                                                   ),
                                                   options: const [
                                                     'Alexandra',

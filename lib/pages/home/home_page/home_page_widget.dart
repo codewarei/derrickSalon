@@ -55,7 +55,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).alternate,
@@ -95,8 +98,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               elevation: 10.0,
                               shape: const CircleBorder(),
                               child: Container(
-                                width: 30.0,
-                                height: 30.0,
+                                width: 40.0,
+                                height: 40.0,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -122,54 +125,105 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           children: [
                             Align(
                               alignment: const AlignmentDirectional(1.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 40.0, 0.0, 20.0),
-                                child: Material(
-                                  color: Colors.transparent,
-                                  elevation: 10.0,
-                                  shape: const CircleBorder(),
-                                  child: Container(
-                                    width: 30.0,
-                                    height: 30.0,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondary,
-                                      ),
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 5.0,
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(10.0),
+                                    bottomRight: Radius.circular(10.0),
+                                    topLeft: Radius.circular(0.0),
+                                    topRight: Radius.circular(0.0),
+                                  ),
+                                ),
+                                child: Container(
+                                  width: 50.0,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(10.0),
+                                      bottomRight: Radius.circular(10.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(0.0),
                                     ),
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          '10',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                            fontFamily: 'Raleway',
-                                            color: FlutterFlowTheme.of(context)
-                                                .alternate,
-                                            fontSize: 15.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w800,
-                                            shadows: [
-                                              Shadow(
+                                    border: Border.all(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondary,
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 40.0, 0.0, 20.0),
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      elevation: 10.0,
+                                      child: Container(
+                                        width: 30.0,
+                                        height: 36.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          shape: BoxShape.rectangle,
+                                        ),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              '10',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                fontFamily: 'Raleway',
                                                 color:
                                                     FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                fontSize: 20.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.bold,
+                                                shadows: [
+                                                  Shadow(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
                                                         .secondaryBackground,
-                                                offset: const Offset(1.0, 1.0),
-                                                blurRadius: 2.0,
-                                              )
-                                            ],
-                                          ),
+                                                    offset: const Offset(1.0, 1.0),
+                                                    blurRadius: 2.0,
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Text(
+                                              'Points',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                fontFamily: 'Raleway',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                fontSize: 7.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w900,
+                                                shadows: [
+                                                  Shadow(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryBackground,
+                                                    offset: const Offset(1.0, 1.0),
+                                                    blurRadius: 2.0,
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -300,10 +354,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         .override(
                                           fontFamily: 'Mukta',
                                           color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                              .primaryBackground,
                                           fontSize: 20.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w300,
+                                          fontWeight: FontWeight.w100,
                                         ),
                                   ),
                                 ),
