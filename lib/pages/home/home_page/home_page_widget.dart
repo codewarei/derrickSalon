@@ -101,20 +101,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 width: 40.0,
                                 height: 40.0,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      blurRadius: 4.0,
+                                      color: Color(0x33000000),
+                                      offset: Offset(
+                                        0.0,
+                                        2.0,
+                                      ),
+                                    )
+                                  ],
                                   shape: BoxShape.circle,
                                   border: Border.all(
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary,
+                                    color: FlutterFlowTheme.of(context).primary,
                                   ),
                                 ),
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.menu_outlined,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  size: 15.0,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  size: 18.0,
                                 ),
                               ),
                             ),
